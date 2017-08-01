@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Caplinked;
 
 /**
  * FolderListTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description List subfolder permissions for a group. Will return an array of subfolders under the specified folder, along with their permissions information. For is_mixed_view, is_mixed_download, and is_mixed_upload: if attribute is set to true, it indicates that at least one (but not all) child folder with view, download, or upload attributes set to true, respectively. \&quot;All Folders\&quot; is the parent of all other folders within the workspace; its permissions will be returned if a folder is not specified.
 /**
- * @package     Swagger\Client
+ * @package     Caplinked
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Caplinked\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Update file information
- * @package     Swagger\Client
+ * @package     Caplinked
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class FileInfoMapped implements ArrayAccess
         'pages' => 'int',
         'version' => 'int',
         'infected' => 'bool',
-        'viewer_image' => '\Swagger\Client\Model\FileViewerImage',
+        'viewer_image' => '\Caplinked\Model\FileViewerImage',
         'created_at' => 'string',
         'updated_at' => 'string'
     ];
@@ -445,7 +445,7 @@ class FileInfoMapped implements ArrayAccess
 
     /**
      * Gets viewer_image
-     * @return \Swagger\Client\Model\FileViewerImage
+     * @return \Caplinked\Model\FileViewerImage
      */
     public function getViewerImage()
     {
@@ -454,7 +454,7 @@ class FileInfoMapped implements ArrayAccess
 
     /**
      * Sets viewer_image
-     * @param \Swagger\Client\Model\FileViewerImage $viewer_image
+     * @param \Caplinked\Model\FileViewerImage $viewer_image
      * @return $this
      */
     public function setViewerImage($viewer_image)
@@ -557,10 +557,10 @@ class FileInfoMapped implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * PermissionsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class PermissionsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class PermissionsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class PermissionsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return PermissionsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -95,8 +95,8 @@ class PermissionsApi
      * @param int $id ID of folder (0 for root) (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $group_id ID of group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderList
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderList
      */
     public function getPermissionsFoldersId($id, $workspace_id, $group_id)
     {
@@ -112,8 +112,8 @@ class PermissionsApi
      * @param int $id ID of folder (0 for root) (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $group_id ID of group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderList, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPermissionsFoldersIdWithHttpInfo($id, $workspace_id, $group_id)
     {
@@ -172,15 +172,15 @@ class PermissionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderList',
+                '\Caplinked\Model\FolderList',
                 '/permissions/folders/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderList', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderList', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderList', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderList', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -199,8 +199,8 @@ class PermissionsApi
      * @param int $group_id ID of group (required)
      * @param string $verb Grant or revoke permission for folder (required)
      * @param string $folder_action Permission type for folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderUpdate
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderUpdate
      */
     public function putPermissionsFoldersId($id, $workspace_id, $group_id, $verb, $folder_action)
     {
@@ -218,8 +218,8 @@ class PermissionsApi
      * @param int $group_id ID of group (required)
      * @param string $verb Grant or revoke permission for folder (required)
      * @param string $folder_action Permission type for folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderUpdate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderUpdate, HTTP status code, HTTP response headers (array of strings)
      */
     public function putPermissionsFoldersIdWithHttpInfo($id, $workspace_id, $group_id, $verb, $folder_action)
     {
@@ -294,15 +294,15 @@ class PermissionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderUpdate',
+                '\Caplinked\Model\FolderUpdate',
                 '/permissions/folders/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderUpdate', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderUpdate', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderUpdate', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderUpdate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * TeamsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class TeamsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class TeamsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class TeamsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return TeamsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,7 +94,7 @@ class TeamsApi
      *
      * @param int $id ID of team from which user will be removed (required)
      * @param int $user_id ID of user to remove (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return void
      */
     public function deleteTeamsIdMemberships($id, $user_id)
@@ -110,7 +110,7 @@ class TeamsApi
      *
      * @param int $id ID of team from which user will be removed (required)
      * @param int $user_id ID of user to remove (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTeamsIdMembershipsWithHttpInfo($id, $user_id)
@@ -180,8 +180,8 @@ class TeamsApi
      *
      * List all teams in organization
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Team
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Team
      */
     public function getTeams()
     {
@@ -194,8 +194,8 @@ class TeamsApi
      *
      * List all teams in organization
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeamsWithHttpInfo()
     {
@@ -226,15 +226,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Team',
+                '\Caplinked\Model\Team',
                 '/teams'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Team', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Team', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Team', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -249,8 +249,8 @@ class TeamsApi
      * Get team information
      *
      * @param int $id ID of the Team (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Team
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Team
      */
     public function getTeamsId($id)
     {
@@ -264,8 +264,8 @@ class TeamsApi
      * Get team information
      *
      * @param int $id ID of the Team (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeamsIdWithHttpInfo($id)
     {
@@ -308,15 +308,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Team',
+                '\Caplinked\Model\Team',
                 '/teams/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Team', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Team', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Team', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -331,8 +331,8 @@ class TeamsApi
      * Get list of team members
      *
      * @param int $id ID of team for which users will be listed (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Membership[]
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Membership[]
      */
     public function getTeamsIdMemberships($id)
     {
@@ -346,8 +346,8 @@ class TeamsApi
      * Get list of team members
      *
      * @param int $id ID of team for which users will be listed (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Membership[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Membership[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeamsIdMembershipsWithHttpInfo($id)
     {
@@ -390,15 +390,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Membership[]',
+                '\Caplinked\Model\Membership[]',
                 '/teams/{id}/memberships'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Membership[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Membership[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Membership[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Membership[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -413,8 +413,8 @@ class TeamsApi
      * List custom watermarks for a team
      *
      * @param int $id ID of team (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomWatermarkSetting
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\CustomWatermarkSetting
      */
     public function getTeamsIdWatermarkSettings($id)
     {
@@ -428,8 +428,8 @@ class TeamsApi
      * List custom watermarks for a team
      *
      * @param int $id ID of team (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTeamsIdWatermarkSettingsWithHttpInfo($id)
     {
@@ -472,15 +472,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomWatermarkSetting',
+                '\Caplinked\Model\CustomWatermarkSetting',
                 '/teams/{id}/watermark_settings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomWatermarkSetting', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\CustomWatermarkSetting', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -500,8 +500,8 @@ class TeamsApi
      * @param bool $team_drm_enabled Toggle DRM (feature availability in workspaces) (optional)
      * @param bool $team_watermarking Toggle watermarking (feature availability in workspaces) (optional)
      * @param bool $team_suppress_emails Toggle email invites (optional, default to true)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Team
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Team
      */
     public function postTeams($team_name, $team_allowed_workspaces = '1', $team_allowed_admins = '10', $team_drm_enabled = null, $team_watermarking = null, $team_suppress_emails = 'true')
     {
@@ -520,8 +520,8 @@ class TeamsApi
      * @param bool $team_drm_enabled Toggle DRM (feature availability in workspaces) (optional)
      * @param bool $team_watermarking Toggle watermarking (feature availability in workspaces) (optional)
      * @param bool $team_suppress_emails Toggle email invites (optional, default to true)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTeamsWithHttpInfo($team_name, $team_allowed_workspaces = '1', $team_allowed_admins = '10', $team_drm_enabled = null, $team_watermarking = null, $team_suppress_emails = 'true')
     {
@@ -580,15 +580,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Team',
+                '\Caplinked\Model\Team',
                 '/teams'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Team', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Team', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Team', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -604,8 +604,8 @@ class TeamsApi
      *
      * @param int $id ID of team to which user will be added (required)
      * @param int $user_id ID of user to add (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Membership
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Membership
      */
     public function postTeamsIdMemberships($id, $user_id)
     {
@@ -620,8 +620,8 @@ class TeamsApi
      *
      * @param int $id ID of team to which user will be added (required)
      * @param int $user_id ID of user to add (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Membership, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Membership, HTTP status code, HTTP response headers (array of strings)
      */
     public function postTeamsIdMembershipsWithHttpInfo($id, $user_id)
     {
@@ -672,15 +672,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Membership',
+                '\Caplinked\Model\Membership',
                 '/teams/{id}/memberships'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Membership', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Membership', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Membership', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Membership', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -702,8 +702,8 @@ class TeamsApi
      * @param bool $team_drm_enabled Toggle DRM (feature availability in workspaces) (optional)
      * @param bool $team_watermarking Toggle watermarking (feature availability in workspaces) (optional)
      * @param bool $team_suppress_emails Toggle email invites (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Team
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Team
      */
     public function putTeamsId($id, $team_name = null, $team_team_owner_id = null, $team_allowed_workspaces = null, $team_allowed_admins = null, $team_drm_enabled = null, $team_watermarking = null, $team_suppress_emails = null)
     {
@@ -724,8 +724,8 @@ class TeamsApi
      * @param bool $team_drm_enabled Toggle DRM (feature availability in workspaces) (optional)
      * @param bool $team_watermarking Toggle watermarking (feature availability in workspaces) (optional)
      * @param bool $team_suppress_emails Toggle email invites (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Team, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Team, HTTP status code, HTTP response headers (array of strings)
      */
     public function putTeamsIdWithHttpInfo($id, $team_name = null, $team_team_owner_id = null, $team_allowed_workspaces = null, $team_allowed_admins = null, $team_drm_enabled = null, $team_watermarking = null, $team_suppress_emails = null)
     {
@@ -796,15 +796,15 @@ class TeamsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Team',
+                '\Caplinked\Model\Team',
                 '/teams/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Team', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Team', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Team', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Team', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

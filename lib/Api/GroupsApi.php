@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * GroupsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class GroupsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class GroupsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class GroupsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return GroupsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,8 +94,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfoDeleted
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfoDeleted
      */
     public function deleteGroupsId($id, $workspace_id)
     {
@@ -110,8 +110,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfoDeleted, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfoDeleted, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGroupsIdWithHttpInfo($id, $workspace_id)
     {
@@ -162,15 +162,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfoDeleted',
+                '\Caplinked\Model\GroupInfoDeleted',
                 '/groups/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfoDeleted', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfoDeleted', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfoDeleted', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfoDeleted', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -187,7 +187,7 @@ class GroupsApi
      * @param int $id ID of the group you wish the user to be removed from (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param int $user_id ID of the user to be removed from this group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return void
      */
     public function deleteGroupsIdMemberships($id, $workspace_id, $user_id)
@@ -204,7 +204,7 @@ class GroupsApi
      * @param int $id ID of the group you wish the user to be removed from (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param int $user_id ID of the user to be removed from this group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteGroupsIdMembershipsWithHttpInfo($id, $workspace_id, $user_id)
@@ -283,8 +283,8 @@ class GroupsApi
      * List all groups in workspace
      *
      * @param int $workspace_id ID of workspace from which to list groups (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function getGroups($workspace_id)
     {
@@ -298,8 +298,8 @@ class GroupsApi
      * List all groups in workspace
      *
      * @param int $workspace_id ID of workspace from which to list groups (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupsWithHttpInfo($workspace_id)
     {
@@ -338,15 +338,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -362,8 +362,8 @@ class GroupsApi
      *
      * @param int $id ID of group (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function getGroupsId($id, $workspace_id)
     {
@@ -378,8 +378,8 @@ class GroupsApi
      *
      * @param int $id ID of group (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupsIdWithHttpInfo($id, $workspace_id)
     {
@@ -430,15 +430,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -454,8 +454,8 @@ class GroupsApi
      *
      * @param int $id ID of the group you want to list the members of (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\User
      */
     public function getGroupsIdMemberships($id, $workspace_id)
     {
@@ -470,8 +470,8 @@ class GroupsApi
      *
      * @param int $id ID of the group you want to list the members of (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupsIdMembershipsWithHttpInfo($id, $workspace_id)
     {
@@ -522,15 +522,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\User',
+                '\Caplinked\Model\User',
                 '/groups/{id}/memberships'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\User', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\User', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -547,8 +547,8 @@ class GroupsApi
      * @param string $group_name Name of group (required)
      * @param int $group_workspace_id Workspace ID for the group (required)
      * @param bool $group_file_managing_abilities Enable file managing abililies for uploading users (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function postGroups($group_name, $group_workspace_id, $group_file_managing_abilities = null)
     {
@@ -564,8 +564,8 @@ class GroupsApi
      * @param string $group_name Name of group (required)
      * @param int $group_workspace_id Workspace ID for the group (required)
      * @param bool $group_file_managing_abilities Enable file managing abililies for uploading users (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function postGroupsWithHttpInfo($group_name, $group_workspace_id, $group_file_managing_abilities = null)
     {
@@ -616,15 +616,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -642,7 +642,7 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param int $user_id ID of the user to be added to this group (required)
      * @param bool $send_email Send workspace invitation email to this user.  Defaults to true, use false if you do not want the email to be sent (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return void
      */
     public function postGroupsIdMemberships($id, $workspace_id, $user_id, $send_email = null)
@@ -660,7 +660,7 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param int $user_id ID of the user to be added to this group (required)
      * @param bool $send_email Send workspace invitation email to this user.  Defaults to true, use false if you do not want the email to be sent (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function postGroupsIdMembershipsWithHttpInfo($id, $workspace_id, $user_id, $send_email = null)
@@ -746,8 +746,8 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param string $group_name Name of group (optional)
      * @param bool $group_file_managing_abilities Ability to delete, rename, and reindex files for uploading users (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsId($id, $workspace_id, $group_name = null, $group_file_managing_abilities = null)
     {
@@ -764,8 +764,8 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param string $group_name Name of group (optional)
      * @param bool $group_file_managing_abilities Ability to delete, rename, and reindex files for uploading users (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdWithHttpInfo($id, $workspace_id, $group_name = null, $group_file_managing_abilities = null)
     {
@@ -824,15 +824,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -848,8 +848,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsIdDisableDrmExpiration($id, $workspace_id)
     {
@@ -864,8 +864,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdDisableDrmExpirationWithHttpInfo($id, $workspace_id)
     {
@@ -916,15 +916,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}/disable_drm_expiration'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -940,8 +940,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsIdDisableExpireAccess($id, $workspace_id)
     {
@@ -956,8 +956,8 @@ class GroupsApi
      *
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdDisableExpireAccessWithHttpInfo($id, $workspace_id)
     {
@@ -1008,15 +1008,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}/disable_expire_access'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1034,8 +1034,8 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param string $group_drm_enabled Enable DRM for group (required)
      * @param \DateTime $group_drm_expires_after Expire DRM after this date. Format: yyyy-mm-dd (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsIdDrm($id, $workspace_id, $group_drm_enabled, $group_drm_expires_after = null)
     {
@@ -1052,8 +1052,8 @@ class GroupsApi
      * @param int $workspace_id Workspace ID for the group (required)
      * @param string $group_drm_enabled Enable DRM for group (required)
      * @param \DateTime $group_drm_expires_after Expire DRM after this date. Format: yyyy-mm-dd (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdDrmWithHttpInfo($id, $workspace_id, $group_drm_enabled, $group_drm_expires_after = null)
     {
@@ -1116,15 +1116,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}/drm'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1141,8 +1141,8 @@ class GroupsApi
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param \DateTime $group_expire_workspace_access_at Expire access on the following date. Format: yyyy-mm-dd (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsIdEnableExpireAccess($id, $workspace_id, $group_expire_workspace_access_at)
     {
@@ -1158,8 +1158,8 @@ class GroupsApi
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param \DateTime $group_expire_workspace_access_at Expire access on the following date. Format: yyyy-mm-dd (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdEnableExpireAccessWithHttpInfo($id, $workspace_id, $group_expire_workspace_access_at)
     {
@@ -1218,15 +1218,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}/enable_expire_access'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1243,8 +1243,8 @@ class GroupsApi
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param bool $group_watermarking Enable watermarking for group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\GroupInfo
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\GroupInfo
      */
     public function putGroupsIdWatermarking($id, $workspace_id, $group_watermarking)
     {
@@ -1260,8 +1260,8 @@ class GroupsApi
      * @param int $id ID of group to update (required)
      * @param int $workspace_id Workspace ID for the group (required)
      * @param bool $group_watermarking Enable watermarking for group (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\GroupInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function putGroupsIdWatermarkingWithHttpInfo($id, $workspace_id, $group_watermarking)
     {
@@ -1320,15 +1320,15 @@ class GroupsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\GroupInfo',
+                '\Caplinked\Model\GroupInfo',
                 '/groups/{id}/watermarking'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\GroupInfo', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\GroupInfo', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\GroupInfo', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

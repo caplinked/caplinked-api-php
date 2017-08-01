@@ -1,4 +1,4 @@
-# Swagger\Client\WorkspacesApi
+# Caplinked\WorkspacesApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getWorkspaces**
-> \Swagger\Client\Model\Workspace getWorkspaces($team_id)
+> \Caplinked\Model\Workspace getWorkspaces($team_id)
 
 List all workspaces for a team
 
@@ -22,7 +22,7 @@ List all workspaces for a team
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WorkspacesApi();
+$api_instance = new Caplinked\Api\WorkspacesApi();
 $team_id = 56; // int | ID of team from which to list workspaces
 
 try {
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Workspace**](../Model/Workspace.md)
+[**\Caplinked\Model\Workspace**](../Model/Workspace.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWorkspacesId**
-> \Swagger\Client\Model\Workspace getWorkspacesId($id)
+> \Caplinked\Model\Workspace getWorkspacesId($id)
 
 Get workspace information
 
@@ -67,7 +67,7 @@ Get workspace information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WorkspacesApi();
+$api_instance = new Caplinked\Api\WorkspacesApi();
 $id = 56; // int | ID of workspace
 
 try {
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Workspace**](../Model/Workspace.md)
+[**\Caplinked\Model\Workspace**](../Model/Workspace.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postWorkspaces**
-> \Swagger\Client\Model\Workspace postWorkspaces($team_id, $workspace_name)
+> \Caplinked\Model\Workspace postWorkspaces($team_id, $workspace_name)
 
 Create workspace
 
@@ -112,7 +112,7 @@ Create workspace. Workspace creator will be added to Workspace Admins group.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WorkspacesApi();
+$api_instance = new Caplinked\Api\WorkspacesApi();
 $team_id = 56; // int | ID of parent team for this workspace
 $workspace_name = "workspace_name_example"; // string | Name of workspace to create
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Workspace**](../Model/Workspace.md)
+[**\Caplinked\Model\Workspace**](../Model/Workspace.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putWorkspacesId**
-> \Swagger\Client\Model\Workspace putWorkspacesId($id, $workspace_name)
+> \Caplinked\Model\Workspace putWorkspacesId($id, $workspace_name)
 
 Update workspace
 
@@ -159,7 +159,7 @@ Update workspace
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WorkspacesApi();
+$api_instance = new Caplinked\Api\WorkspacesApi();
 $id = 56; // int | ID of workspace to update
 $workspace_name = "workspace_name_example"; // string | Name of workspace to update
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Workspace**](../Model/Workspace.md)
+[**\Caplinked\Model\Workspace**](../Model/Workspace.md)
 
 ### Authorization
 

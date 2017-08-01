@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Caplinked;
 
 /**
  * FolderUpdateTest Class Doc Comment
@@ -35,7 +35,7 @@ namespace Swagger\Client;
  * @category    Class */
 // * @description Update folder permissions for a group. View &#x3D; TRUE, this means that group members can return the folder/file and its viewer image. Download &#x3D; TRUE, this means tha that group members can create download containing the folder. Upload &#x3D; TRUE, this mean that group members can create an upload object with the folder as a parent.
 /**
- * @package     Swagger\Client
+ * @package     Caplinked
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

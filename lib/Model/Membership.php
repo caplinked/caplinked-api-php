@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Caplinked\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Get list of team members
- * @package     Swagger\Client
+ * @package     Caplinked
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,7 +55,7 @@ class Membership implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => '\Swagger\Client\Model\User',
+        'user' => '\Caplinked\Model\User',
         'created_at' => 'string',
         'updated_at' => 'string'
     ];
@@ -175,7 +175,7 @@ class Membership implements ArrayAccess
 
     /**
      * Gets user
-     * @return \Swagger\Client\Model\User
+     * @return \Caplinked\Model\User
      */
     public function getUser()
     {
@@ -184,7 +184,7 @@ class Membership implements ArrayAccess
 
     /**
      * Sets user
-     * @param \Swagger\Client\Model\User $user
+     * @param \Caplinked\Model\User $user
      * @return $this
      */
     public function setUser($user)
@@ -287,10 +287,10 @@ class Membership implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

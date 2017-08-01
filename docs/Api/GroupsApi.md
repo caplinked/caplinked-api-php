@@ -1,4 +1,4 @@
-# Swagger\Client\GroupsApi
+# Caplinked\GroupsApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **deleteGroupsId**
-> \Swagger\Client\Model\GroupInfoDeleted deleteGroupsId($id, $workspace_id)
+> \Caplinked\Model\GroupInfoDeleted deleteGroupsId($id, $workspace_id)
 
 Delete group
 
@@ -31,7 +31,7 @@ Delete group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfoDeleted**](../Model/GroupInfoDeleted.md)
+[**\Caplinked\Model\GroupInfoDeleted**](../Model/GroupInfoDeleted.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Remove a user from a group. Members of the Workspace Admin group may only be rem
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of the group you wish the user to be removed from
 $workspace_id = 56; // int | Workspace ID for the group
 $user_id = 56; // int | ID of the user to be removed from this group
@@ -115,7 +115,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroups**
-> \Swagger\Client\Model\GroupInfo getGroups($workspace_id)
+> \Caplinked\Model\GroupInfo getGroups($workspace_id)
 
 List all groups in workspace
 
@@ -126,7 +126,7 @@ List all groups in workspace
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $workspace_id = 56; // int | ID of workspace from which to list groups
 
 try {
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupsId**
-> \Swagger\Client\Model\GroupInfo getGroupsId($id, $workspace_id)
+> \Caplinked\Model\GroupInfo getGroupsId($id, $workspace_id)
 
 Get group information
 
@@ -171,7 +171,7 @@ Get group information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group
 $workspace_id = 56; // int | Workspace ID for the group
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getGroupsIdMemberships**
-> \Swagger\Client\Model\User getGroupsIdMemberships($id, $workspace_id)
+> \Caplinked\Model\User getGroupsIdMemberships($id, $workspace_id)
 
 List all memberships for a group
 
@@ -218,7 +218,7 @@ List all memberships for a group. Note that Workspace Admins are in two groups: 
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of the group you want to list the members of
 $workspace_id = 56; // int | Workspace ID for the group
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User**](../Model/User.md)
+[**\Caplinked\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postGroups**
-> \Swagger\Client\Model\GroupInfo postGroups($group_name, $group_workspace_id, $group_file_managing_abilities)
+> \Caplinked\Model\GroupInfo postGroups($group_name, $group_workspace_id, $group_file_managing_abilities)
 
 Create group
 
@@ -265,7 +265,7 @@ Create group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $group_name = "group_name_example"; // string | Name of group
 $group_workspace_id = 56; // int | Workspace ID for the group
 $group_file_managing_abilities = true; // bool | Enable file managing abililies for uploading users
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Add user to group (adds to parent workspace if they are not already a member)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of the group you wish the user to be added to
 $workspace_id = 56; // int | Workspace ID for the group
 $user_id = 56; // int | ID of the user to be added to this group
@@ -353,7 +353,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsId**
-> \Swagger\Client\Model\GroupInfo putGroupsId($id, $workspace_id, $group_name, $group_file_managing_abilities)
+> \Caplinked\Model\GroupInfo putGroupsId($id, $workspace_id, $group_name, $group_file_managing_abilities)
 
 Update group
 
@@ -364,7 +364,7 @@ Update group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group
 $workspace_id = 56; // int | Workspace ID for the group
 $group_name = "group_name_example"; // string | Name of group
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -404,7 +404,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsIdDisableDrmExpiration**
-> \Swagger\Client\Model\GroupInfo putGroupsIdDisableDrmExpiration($id, $workspace_id)
+> \Caplinked\Model\GroupInfo putGroupsIdDisableDrmExpiration($id, $workspace_id)
 
 Disable DRM expiration for group
 
@@ -415,7 +415,7 @@ Disable DRM expiration for group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -451,7 +451,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsIdDisableExpireAccess**
-> \Swagger\Client\Model\GroupInfo putGroupsIdDisableExpireAccess($id, $workspace_id)
+> \Caplinked\Model\GroupInfo putGroupsIdDisableExpireAccess($id, $workspace_id)
 
 Disable access expiration for a group
 
@@ -462,7 +462,7 @@ Disable access expiration for a group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -498,7 +498,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsIdDrm**
-> \Swagger\Client\Model\GroupInfo putGroupsIdDrm($id, $workspace_id, $group_drm_enabled, $group_drm_expires_after)
+> \Caplinked\Model\GroupInfo putGroupsIdDrm($id, $workspace_id, $group_drm_enabled, $group_drm_expires_after)
 
 Update DRM for group
 
@@ -509,7 +509,7 @@ Update DRM for group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 $group_drm_enabled = "group_drm_enabled_example"; // string | Enable DRM for group
@@ -535,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsIdEnableExpireAccess**
-> \Swagger\Client\Model\GroupInfo putGroupsIdEnableExpireAccess($id, $workspace_id, $group_expire_workspace_access_at)
+> \Caplinked\Model\GroupInfo putGroupsIdEnableExpireAccess($id, $workspace_id, $group_expire_workspace_access_at)
 
 Enable access expiration for a group
 
@@ -560,7 +560,7 @@ Enable access expiration for a group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 $group_expire_workspace_access_at = new \DateTime("2013-10-20"); // \DateTime | Expire access on the following date. Format: yyyy-mm-dd
@@ -584,7 +584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 
@@ -598,7 +598,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putGroupsIdWatermarking**
-> \Swagger\Client\Model\GroupInfo putGroupsIdWatermarking($id, $workspace_id, $group_watermarking)
+> \Caplinked\Model\GroupInfo putGroupsIdWatermarking($id, $workspace_id, $group_watermarking)
 
 Watermarking for group
 
@@ -609,7 +609,7 @@ Watermarking for group
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\GroupsApi();
+$api_instance = new Caplinked\Api\GroupsApi();
 $id = 56; // int | ID of group to update
 $workspace_id = 56; // int | Workspace ID for the group
 $group_watermarking = true; // bool | Enable watermarking for group
@@ -633,7 +633,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupInfo**](../Model/GroupInfo.md)
+[**\Caplinked\Model\GroupInfo**](../Model/GroupInfo.md)
 
 ### Authorization
 

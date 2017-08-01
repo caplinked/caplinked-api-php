@@ -1,4 +1,4 @@
-# Swagger\Client\WatermarkApi
+# Caplinked\WatermarkApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteWatermarkId**
-> \Swagger\Client\Model\StatusMessage deleteWatermarkId($id)
+> \Caplinked\Model\StatusMessage deleteWatermarkId($id)
 
 Delete custom watermark
 
@@ -22,7 +22,7 @@ Delete custom watermark
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WatermarkApi();
+$api_instance = new Caplinked\Api\WatermarkApi();
 $id = 56; // int | ID of the watermark setting to delete
 
 try {
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StatusMessage**](../Model/StatusMessage.md)
+[**\Caplinked\Model\StatusMessage**](../Model/StatusMessage.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getWatermarkId**
-> \Swagger\Client\Model\CustomWatermarkSetting getWatermarkId($id)
+> \Caplinked\Model\CustomWatermarkSetting getWatermarkId($id)
 
 Get custom watermark setting
 
@@ -67,7 +67,7 @@ Get custom watermark setting
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WatermarkApi();
+$api_instance = new Caplinked\Api\WatermarkApi();
 $id = 56; // int | ID of the watermark setting
 
 try {
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
+[**\Caplinked\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postWatermark**
-> \Swagger\Client\Model\CustomWatermarkSetting postWatermark($team_id, $custom_text, $color, $opacity, $font_size, $rotation, $hposition, $vposition, $display_user_name, $display_user_email, $display_ip_address, $display_time, $display_workspace_name)
+> \Caplinked\Model\CustomWatermarkSetting postWatermark($team_id, $custom_text, $color, $opacity, $font_size, $rotation, $hposition, $vposition, $display_user_name, $display_user_email, $display_ip_address, $display_time, $display_workspace_name)
 
 Add custom watermark
 
@@ -112,7 +112,7 @@ Add custom watermark
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WatermarkApi();
+$api_instance = new Caplinked\Api\WatermarkApi();
 $team_id = 56; // int | ID of the team
 $custom_text = "custom_text_example"; // string | Custom watermark text
 $color = "#333333"; // string | Hexadecimal color value (i.e. #eee, #e1e1e1)
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
+[**\Caplinked\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putWatermarkId**
-> \Swagger\Client\Model\CustomWatermarkSetting putWatermarkId($id, $custom_text, $color, $opacity, $font_size, $rotation, $hposition, $vposition, $display_user_name, $display_user_email, $display_ip_address, $display_time, $display_workspace_name)
+> \Caplinked\Model\CustomWatermarkSetting putWatermarkId($id, $custom_text, $color, $opacity, $font_size, $rotation, $hposition, $vposition, $display_user_name, $display_user_email, $display_ip_address, $display_time, $display_workspace_name)
 
 Update custom watermark
 
@@ -181,7 +181,7 @@ Update custom watermark
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\WatermarkApi();
+$api_instance = new Caplinked\Api\WatermarkApi();
 $id = 56; // int | ID of the watermark setting to update
 $custom_text = "custom_text_example"; // string | Custom watermark text
 $color = "color_example"; // string | Hexadecimal color value (i.e. #eee, #e1e1e1)
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
+[**\Caplinked\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
 
 ### Authorization
 

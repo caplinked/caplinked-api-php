@@ -1,4 +1,4 @@
-# Swagger\Client\TeamsApi
+# Caplinked\TeamsApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -26,7 +26,7 @@ Remove team member
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of team from which user will be removed
 $user_id = 56; // int | ID of user to remove
 
@@ -61,7 +61,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeams**
-> \Swagger\Client\Model\Team getTeams()
+> \Caplinked\Model\Team getTeams()
 
 List all teams in organization
 
@@ -72,7 +72,7 @@ List all teams in organization
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 
 try {
     $result = $api_instance->getTeams();
@@ -88,7 +88,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
+[**\Caplinked\Model\Team**](../Model/Team.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeamsId**
-> \Swagger\Client\Model\Team getTeamsId($id)
+> \Caplinked\Model\Team getTeamsId($id)
 
 Get team information
 
@@ -113,7 +113,7 @@ Get team information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of the Team
 
 try {
@@ -133,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
+[**\Caplinked\Model\Team**](../Model/Team.md)
 
 ### Authorization
 
@@ -147,7 +147,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeamsIdMemberships**
-> \Swagger\Client\Model\Membership[] getTeamsIdMemberships($id)
+> \Caplinked\Model\Membership[] getTeamsIdMemberships($id)
 
 Get list of team members
 
@@ -158,7 +158,7 @@ Get list of team members
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of team for which users will be listed
 
 try {
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Membership[]**](../Model/Membership.md)
+[**\Caplinked\Model\Membership[]**](../Model/Membership.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTeamsIdWatermarkSettings**
-> \Swagger\Client\Model\CustomWatermarkSetting getTeamsIdWatermarkSettings($id)
+> \Caplinked\Model\CustomWatermarkSetting getTeamsIdWatermarkSettings($id)
 
 List custom watermarks for a team
 
@@ -203,7 +203,7 @@ List custom watermarks for a team
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of team
 
 try {
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
+[**\Caplinked\Model\CustomWatermarkSetting**](../Model/CustomWatermarkSetting.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTeams**
-> \Swagger\Client\Model\Team postTeams($team_name, $team_allowed_workspaces, $team_allowed_admins, $team_drm_enabled, $team_watermarking, $team_suppress_emails)
+> \Caplinked\Model\Team postTeams($team_name, $team_allowed_workspaces, $team_allowed_admins, $team_drm_enabled, $team_watermarking, $team_suppress_emails)
 
 Create team
 
@@ -248,7 +248,7 @@ Create team. Current user will become team owner.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $team_name = "team_name_example"; // string | Name of the team
 $team_allowed_workspaces = 1; // int | Maximum workspaces for team
 $team_allowed_admins = 10; // int | Maximum number of admins for team
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
+[**\Caplinked\Model\Team**](../Model/Team.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postTeamsIdMemberships**
-> \Swagger\Client\Model\Membership postTeamsIdMemberships($id, $user_id)
+> \Caplinked\Model\Membership postTeamsIdMemberships($id, $user_id)
 
 Add team member
 
@@ -303,7 +303,7 @@ Add team member
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of team to which user will be added
 $user_id = 56; // int | ID of user to add
 
@@ -325,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Membership**](../Model/Membership.md)
+[**\Caplinked\Model\Membership**](../Model/Membership.md)
 
 ### Authorization
 
@@ -339,7 +339,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putTeamsId**
-> \Swagger\Client\Model\Team putTeamsId($id, $team_name, $team_team_owner_id, $team_allowed_workspaces, $team_allowed_admins, $team_drm_enabled, $team_watermarking, $team_suppress_emails)
+> \Caplinked\Model\Team putTeamsId($id, $team_name, $team_team_owner_id, $team_allowed_workspaces, $team_allowed_admins, $team_drm_enabled, $team_watermarking, $team_suppress_emails)
 
 Update team
 
@@ -350,7 +350,7 @@ Update team. Includes option to designate a new Team Owner.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\TeamsApi();
+$api_instance = new Caplinked\Api\TeamsApi();
 $id = 56; // int | ID of team to update
 $team_name = "team_name_example"; // string | Name of the team
 $team_team_owner_id = 56; // int | User ID of the team owner
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Team**](../Model/Team.md)
+[**\Caplinked\Model\Team**](../Model/Team.md)
 
 ### Authorization
 

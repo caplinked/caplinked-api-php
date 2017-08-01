@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * DownloadsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class DownloadsApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class DownloadsApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class DownloadsApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return DownloadsApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,8 +94,8 @@ class DownloadsApi
      *
      * @param int $id ID of download to delete (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Delete
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Delete
      */
     public function deleteDownloadsId($id, $workspace_id)
     {
@@ -110,8 +110,8 @@ class DownloadsApi
      *
      * @param int $id ID of download to delete (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Delete, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Delete, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteDownloadsIdWithHttpInfo($id, $workspace_id)
     {
@@ -162,15 +162,15 @@ class DownloadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Delete',
+                '\Caplinked\Model\Delete',
                 '/downloads/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Delete', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Delete', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Delete', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Delete', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,8 +186,8 @@ class DownloadsApi
      *
      * @param int $file_id ID of file to download (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ExpiringUrl
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\ExpiringUrl
      */
     public function getDownloadsFileFileId($file_id, $workspace_id)
     {
@@ -202,8 +202,8 @@ class DownloadsApi
      *
      * @param int $file_id ID of file to download (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ExpiringUrl, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\ExpiringUrl, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDownloadsFileFileIdWithHttpInfo($file_id, $workspace_id)
     {
@@ -254,15 +254,15 @@ class DownloadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ExpiringUrl',
+                '\Caplinked\Model\ExpiringUrl',
                 '/downloads/file/{file_id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ExpiringUrl', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\ExpiringUrl', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ExpiringUrl', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\ExpiringUrl', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -278,8 +278,8 @@ class DownloadsApi
      *
      * @param int $id ID of download (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\ExpiringUrl
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\ExpiringUrl
      */
     public function getDownloadsId($id, $workspace_id)
     {
@@ -294,8 +294,8 @@ class DownloadsApi
      *
      * @param int $id ID of download (required)
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\ExpiringUrl, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\ExpiringUrl, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDownloadsIdWithHttpInfo($id, $workspace_id)
     {
@@ -346,15 +346,15 @@ class DownloadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\ExpiringUrl',
+                '\Caplinked\Model\ExpiringUrl',
                 '/downloads/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ExpiringUrl', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\ExpiringUrl', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ExpiringUrl', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\ExpiringUrl', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -369,8 +369,8 @@ class DownloadsApi
      * Get status of downloads for current user
      *
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Meta
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Meta
      */
     public function getDownloadsStatusWorkspaceId($workspace_id)
     {
@@ -384,8 +384,8 @@ class DownloadsApi
      * Get status of downloads for current user
      *
      * @param int $workspace_id ID of Workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Meta, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Meta, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDownloadsStatusWorkspaceIdWithHttpInfo($workspace_id)
     {
@@ -428,15 +428,15 @@ class DownloadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Meta',
+                '\Caplinked\Model\Meta',
                 '/downloads/status/{workspace_id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Meta', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Meta', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Meta', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Meta', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -453,8 +453,8 @@ class DownloadsApi
      * @param int $workspace_id ID of Workspace (required)
      * @param int[] $download_folder_ids IDs of folders to include in download (optional)
      * @param int[] $download_file_ids IDs of files to include in download (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Meta
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Meta
      */
     public function postDownloads($workspace_id, $download_folder_ids = null, $download_file_ids = null)
     {
@@ -470,8 +470,8 @@ class DownloadsApi
      * @param int $workspace_id ID of Workspace (required)
      * @param int[] $download_folder_ids IDs of folders to include in download (optional)
      * @param int[] $download_file_ids IDs of files to include in download (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Meta, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Meta, HTTP status code, HTTP response headers (array of strings)
      */
     public function postDownloadsWithHttpInfo($workspace_id, $download_folder_ids = null, $download_file_ids = null)
     {
@@ -518,15 +518,15 @@ class DownloadsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Meta',
+                '\Caplinked\Model\Meta',
                 '/downloads'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Meta', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Meta', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Meta', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Meta', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

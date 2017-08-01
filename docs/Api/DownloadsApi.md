@@ -1,4 +1,4 @@
-# Swagger\Client\DownloadsApi
+# Caplinked\DownloadsApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **deleteDownloadsId**
-> \Swagger\Client\Model\Delete deleteDownloadsId($id, $workspace_id)
+> \Caplinked\Model\Delete deleteDownloadsId($id, $workspace_id)
 
 Delete download
 
@@ -23,7 +23,7 @@ Delete download
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DownloadsApi();
+$api_instance = new Caplinked\Api\DownloadsApi();
 $id = 56; // int | ID of download to delete
 $workspace_id = 56; // int | ID of Workspace
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Delete**](../Model/Delete.md)
+[**\Caplinked\Model\Delete**](../Model/Delete.md)
 
 ### Authorization
 
@@ -59,7 +59,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDownloadsFileFileId**
-> \Swagger\Client\Model\ExpiringUrl getDownloadsFileFileId($file_id, $workspace_id)
+> \Caplinked\Model\ExpiringUrl getDownloadsFileFileId($file_id, $workspace_id)
 
 Get single file
 
@@ -70,7 +70,7 @@ Download single file without DRM applied
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DownloadsApi();
+$api_instance = new Caplinked\Api\DownloadsApi();
 $file_id = 56; // int | ID of file to download
 $workspace_id = 56; // int | ID of Workspace
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExpiringUrl**](../Model/ExpiringUrl.md)
+[**\Caplinked\Model\ExpiringUrl**](../Model/ExpiringUrl.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDownloadsId**
-> \Swagger\Client\Model\ExpiringUrl getDownloadsId($id, $workspace_id)
+> \Caplinked\Model\ExpiringUrl getDownloadsId($id, $workspace_id)
 
 Get zip
 
@@ -117,7 +117,7 @@ Get a zip file of a previously created download object
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DownloadsApi();
+$api_instance = new Caplinked\Api\DownloadsApi();
 $id = 56; // int | ID of download
 $workspace_id = 56; // int | ID of Workspace
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ExpiringUrl**](../Model/ExpiringUrl.md)
+[**\Caplinked\Model\ExpiringUrl**](../Model/ExpiringUrl.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getDownloadsStatusWorkspaceId**
-> \Swagger\Client\Model\Meta getDownloadsStatusWorkspaceId($workspace_id)
+> \Caplinked\Model\Meta getDownloadsStatusWorkspaceId($workspace_id)
 
 Get status of downloads for current user
 
@@ -164,7 +164,7 @@ Get status of downloads created by current user within a specified workspace
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DownloadsApi();
+$api_instance = new Caplinked\Api\DownloadsApi();
 $workspace_id = 56; // int | ID of Workspace
 
 try {
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Meta**](../Model/Meta.md)
+[**\Caplinked\Model\Meta**](../Model/Meta.md)
 
 ### Authorization
 
@@ -198,7 +198,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postDownloads**
-> \Swagger\Client\Model\Meta postDownloads($workspace_id, $download_folder_ids, $download_file_ids)
+> \Caplinked\Model\Meta postDownloads($workspace_id, $download_folder_ids, $download_file_ids)
 
 Create zip file
 
@@ -209,7 +209,7 @@ Create download object containing folders and/or files
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\DownloadsApi();
+$api_instance = new Caplinked\Api\DownloadsApi();
 $workspace_id = 56; // int | ID of Workspace
 $download_folder_ids = array(56); // int[] | IDs of folders to include in download
 $download_file_ids = array(56); // int[] | IDs of files to include in download
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Meta**](../Model/Meta.md)
+[**\Caplinked\Model\Meta**](../Model/Meta.md)
 
 ### Authorization
 

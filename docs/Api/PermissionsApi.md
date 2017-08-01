@@ -1,4 +1,4 @@
-# Swagger\Client\PermissionsApi
+# Caplinked\PermissionsApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getPermissionsFoldersId**
-> \Swagger\Client\Model\FolderList getPermissionsFoldersId($id, $workspace_id, $group_id)
+> \Caplinked\Model\FolderList getPermissionsFoldersId($id, $workspace_id, $group_id)
 
 List subfolder permissions
 
@@ -20,7 +20,7 @@ List subfolder permissions for a group. Will return an array of subfolders under
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\PermissionsApi();
+$api_instance = new Caplinked\Api\PermissionsApi();
 $id = 56; // int | ID of folder (0 for root)
 $workspace_id = 56; // int | ID of workspace
 $group_id = 56; // int | ID of group
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FolderList**](../Model/FolderList.md)
+[**\Caplinked\Model\FolderList**](../Model/FolderList.md)
 
 ### Authorization
 
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putPermissionsFoldersId**
-> \Swagger\Client\Model\FolderUpdate putPermissionsFoldersId($id, $workspace_id, $group_id, $verb, $folder_action)
+> \Caplinked\Model\FolderUpdate putPermissionsFoldersId($id, $workspace_id, $group_id, $verb, $folder_action)
 
 Update folder permissions
 
@@ -69,7 +69,7 @@ Update folder permissions for a group. View = TRUE, this means that group member
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\PermissionsApi();
+$api_instance = new Caplinked\Api\PermissionsApi();
 $id = 56; // int | ID of folder (0 for root)
 $workspace_id = 56; // int | ID of workspace
 $group_id = 56; // int | ID of group
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FolderUpdate**](../Model/FolderUpdate.md)
+[**\Caplinked\Model\FolderUpdate**](../Model/FolderUpdate.md)
 
 ### Authorization
 

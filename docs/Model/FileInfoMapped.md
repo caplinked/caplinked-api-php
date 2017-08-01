@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **pages** | **int** |  | [optional] 
 **version** | **int** |  | [optional] 
 **infected** | **bool** |  | [optional] 
-**viewer_image** | [**\Swagger\Client\Model\FileViewerImage**](FileViewerImage.md) |  | [optional] 
+**viewer_image** | [**\Caplinked\Model\FileViewerImage**](FileViewerImage.md) |  | [optional] 
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 

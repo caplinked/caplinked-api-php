@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * OrganizationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class OrganizationApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class OrganizationApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class OrganizationApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return OrganizationApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,7 +93,7 @@ class OrganizationApi
      * Remove organization admin membership
      *
      * @param int $user_id ID of user to be removed as an organization admin (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return void
      */
     public function deleteOrganizationMemberships($user_id)
@@ -108,7 +108,7 @@ class OrganizationApi
      * Remove organization admin membership
      *
      * @param int $user_id ID of user to be removed as an organization admin (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Caplinked\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteOrganizationMembershipsWithHttpInfo($user_id)
@@ -166,8 +166,8 @@ class OrganizationApi
      *
      * Get organization information
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Organization
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Organization
      */
     public function getOrganization()
     {
@@ -180,8 +180,8 @@ class OrganizationApi
      *
      * Get organization information
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrganizationWithHttpInfo()
     {
@@ -212,15 +212,15 @@ class OrganizationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Organization',
+                '\Caplinked\Model\Organization',
                 '/organization'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Organization', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Organization', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Organization', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Organization', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -234,8 +234,8 @@ class OrganizationApi
      *
      * Show all organization members
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\User
      */
     public function getOrganizationMemberships()
     {
@@ -248,8 +248,8 @@ class OrganizationApi
      *
      * Show all organization members
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrganizationMembershipsWithHttpInfo()
     {
@@ -280,15 +280,15 @@ class OrganizationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\User',
+                '\Caplinked\Model\User',
                 '/organization/memberships'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\User', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\User', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -303,8 +303,8 @@ class OrganizationApi
      * Add organization admin membership
      *
      * @param int $user_id ID of user to be added as an organization admin (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\OrganizationMembership
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\OrganizationMembership
      */
     public function postOrganizationMemberships($user_id)
     {
@@ -318,8 +318,8 @@ class OrganizationApi
      * Add organization admin membership
      *
      * @param int $user_id ID of user to be added as an organization admin (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\OrganizationMembership, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\OrganizationMembership, HTTP status code, HTTP response headers (array of strings)
      */
     public function postOrganizationMembershipsWithHttpInfo($user_id)
     {
@@ -358,15 +358,15 @@ class OrganizationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\OrganizationMembership',
+                '\Caplinked\Model\OrganizationMembership',
                 '/organization/memberships'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\OrganizationMembership', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\OrganizationMembership', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\OrganizationMembership', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\OrganizationMembership', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -385,8 +385,8 @@ class OrganizationApi
      * @param string $location Location of the organization to update (optional)
      * @param string $billing_email Billing email address of the organization to update (optional)
      * @param string $url Website of the organization to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Organization
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Organization
      */
     public function putOrganization($name = null, $description = null, $location = null, $billing_email = null, $url = null)
     {
@@ -404,8 +404,8 @@ class OrganizationApi
      * @param string $location Location of the organization to update (optional)
      * @param string $billing_email Billing email address of the organization to update (optional)
      * @param string $url Website of the organization to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Organization, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Organization, HTTP status code, HTTP response headers (array of strings)
      */
     public function putOrganizationWithHttpInfo($name = null, $description = null, $location = null, $billing_email = null, $url = null)
     {
@@ -456,15 +456,15 @@ class OrganizationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Organization',
+                '\Caplinked\Model\Organization',
                 '/organization'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Organization', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Organization', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Organization', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Organization', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -481,8 +481,8 @@ class OrganizationApi
      * @param string $phone_number Support phone number of the organization to update (optional)
      * @param string $email Support email of the organization to update (optional)
      * @param string $website Support website of the organization to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SupportInformation
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\SupportInformation
      */
     public function putOrganizationSupportInformation($phone_number = null, $email = null, $website = null)
     {
@@ -498,8 +498,8 @@ class OrganizationApi
      * @param string $phone_number Support phone number of the organization to update (optional)
      * @param string $email Support email of the organization to update (optional)
      * @param string $website Support website of the organization to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SupportInformation, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\SupportInformation, HTTP status code, HTTP response headers (array of strings)
      */
     public function putOrganizationSupportInformationWithHttpInfo($phone_number = null, $email = null, $website = null)
     {
@@ -542,15 +542,15 @@ class OrganizationApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SupportInformation',
+                '\Caplinked\Model\SupportInformation',
                 '/organization/support_information'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SupportInformation', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\SupportInformation', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SupportInformation', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\SupportInformation', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

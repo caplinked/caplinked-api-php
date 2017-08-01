@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swaagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Caplinked\Model;
 
 use \ArrayAccess;
 
@@ -36,7 +36,7 @@ use \ArrayAccess;
  *
  * @category    Class
  * @description Get folder information
- * @package     Swagger\Client
+ * @package     Caplinked
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
@@ -55,9 +55,9 @@ class FolderContent implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'folder' => '\Swagger\Client\Model\FolderMeta',
-        'immediate_subfolders' => '\Swagger\Client\Model\FolderMeta',
-        'immediate_subfiles' => '\Swagger\Client\Model\FileInfoCompact'
+        'folder' => '\Caplinked\Model\FolderMeta',
+        'immediate_subfolders' => '\Caplinked\Model\FolderMeta',
+        'immediate_subfiles' => '\Caplinked\Model\FileInfoCompact'
     ];
 
     /**
@@ -175,7 +175,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Gets folder
-     * @return \Swagger\Client\Model\FolderMeta
+     * @return \Caplinked\Model\FolderMeta
      */
     public function getFolder()
     {
@@ -184,7 +184,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Sets folder
-     * @param \Swagger\Client\Model\FolderMeta $folder
+     * @param \Caplinked\Model\FolderMeta $folder
      * @return $this
      */
     public function setFolder($folder)
@@ -196,7 +196,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Gets immediate_subfolders
-     * @return \Swagger\Client\Model\FolderMeta
+     * @return \Caplinked\Model\FolderMeta
      */
     public function getImmediateSubfolders()
     {
@@ -205,7 +205,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Sets immediate_subfolders
-     * @param \Swagger\Client\Model\FolderMeta $immediate_subfolders
+     * @param \Caplinked\Model\FolderMeta $immediate_subfolders
      * @return $this
      */
     public function setImmediateSubfolders($immediate_subfolders)
@@ -217,7 +217,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Gets immediate_subfiles
-     * @return \Swagger\Client\Model\FileInfoCompact
+     * @return \Caplinked\Model\FileInfoCompact
      */
     public function getImmediateSubfiles()
     {
@@ -226,7 +226,7 @@ class FolderContent implements ArrayAccess
 
     /**
      * Sets immediate_subfiles
-     * @param \Swagger\Client\Model\FileInfoCompact $immediate_subfiles
+     * @param \Caplinked\Model\FileInfoCompact $immediate_subfiles
      * @return $this
      */
     public function setImmediateSubfiles($immediate_subfiles)
@@ -287,10 +287,10 @@ class FolderContent implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Swagger\Client\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\Caplinked\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

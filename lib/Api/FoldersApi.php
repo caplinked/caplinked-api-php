@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * FoldersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class FoldersApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class FoldersApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class FoldersApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return FoldersApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,8 +94,8 @@ class FoldersApi
      *
      * @param int $id ID of folder to delete (required)
      * @param string $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderDelete
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderDelete
      */
     public function deleteFoldersId($id, $workspace_id)
     {
@@ -110,8 +110,8 @@ class FoldersApi
      *
      * @param int $id ID of folder to delete (required)
      * @param string $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderDelete, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderDelete, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFoldersIdWithHttpInfo($id, $workspace_id)
     {
@@ -162,15 +162,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderDelete',
+                '\Caplinked\Model\FolderDelete',
                 '/folders/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderDelete', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderDelete', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderDelete', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderDelete', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -186,8 +186,8 @@ class FoldersApi
      *
      * @param int $id ID of folder (required)
      * @param string $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderContent
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderContent
      */
     public function getFoldersId($id, $workspace_id)
     {
@@ -202,8 +202,8 @@ class FoldersApi
      *
      * @param int $id ID of folder (required)
      * @param string $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderContent, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderContent, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFoldersIdWithHttpInfo($id, $workspace_id)
     {
@@ -254,15 +254,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderContent',
+                '\Caplinked\Model\FolderContent',
                 '/folders/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderContent', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderContent', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderContent', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderContent', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -279,8 +279,8 @@ class FoldersApi
      * @param string $workspace_id ID of workspace (required)
      * @param string $name Name of new folder (required)
      * @param int $parent_id ID of parent folder (defaults to root folder [id&#x3D;0]) (optional, default to 0)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderMeta
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderMeta
      */
     public function postFolders($workspace_id, $name, $parent_id = '0')
     {
@@ -296,8 +296,8 @@ class FoldersApi
      * @param string $workspace_id ID of workspace (required)
      * @param string $name Name of new folder (required)
      * @param int $parent_id ID of parent folder (defaults to root folder [id&#x3D;0]) (optional, default to 0)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderMeta, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderMeta, HTTP status code, HTTP response headers (array of strings)
      */
     public function postFoldersWithHttpInfo($workspace_id, $name, $parent_id = '0')
     {
@@ -348,15 +348,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderMeta',
+                '\Caplinked\Model\FolderMeta',
                 '/folders'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderMeta', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderMeta', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderMeta', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderMeta', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -373,8 +373,8 @@ class FoldersApi
      * @param int $id ID of folder to copy (required)
      * @param string $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderCopyMove
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderCopyMove
      */
     public function postFoldersIdCopy($id, $workspace_id, $destination_folder_id)
     {
@@ -390,8 +390,8 @@ class FoldersApi
      * @param int $id ID of folder to copy (required)
      * @param string $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderCopyMove, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderCopyMove, HTTP status code, HTTP response headers (array of strings)
      */
     public function postFoldersIdCopyWithHttpInfo($id, $workspace_id, $destination_folder_id)
     {
@@ -450,15 +450,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderCopyMove',
+                '\Caplinked\Model\FolderCopyMove',
                 '/folders/{id}/copy'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderCopyMove', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderCopyMove', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderCopyMove', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderCopyMove', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -475,8 +475,8 @@ class FoldersApi
      * @param int $id ID of folder to move (required)
      * @param string $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderCopyMove
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderCopyMove
      */
     public function postFoldersIdMove($id, $workspace_id, $destination_folder_id)
     {
@@ -492,8 +492,8 @@ class FoldersApi
      * @param int $id ID of folder to move (required)
      * @param string $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderCopyMove, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderCopyMove, HTTP status code, HTTP response headers (array of strings)
      */
     public function postFoldersIdMoveWithHttpInfo($id, $workspace_id, $destination_folder_id)
     {
@@ -552,15 +552,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderCopyMove',
+                '\Caplinked\Model\FolderCopyMove',
                 '/folders/{id}/move'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderCopyMove', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderCopyMove', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderCopyMove', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderCopyMove', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -578,8 +578,8 @@ class FoldersApi
      * @param string $workspace_id ID of workspace (required)
      * @param string $folder_name Name of folder (optional)
      * @param int $folder_index Index number of folder within current folder scope (integer) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FolderMeta
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FolderMeta
      */
     public function putFoldersId($id, $workspace_id, $folder_name = null, $folder_index = null)
     {
@@ -596,8 +596,8 @@ class FoldersApi
      * @param string $workspace_id ID of workspace (required)
      * @param string $folder_name Name of folder (optional)
      * @param int $folder_index Index number of folder within current folder scope (integer) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FolderMeta, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FolderMeta, HTTP status code, HTTP response headers (array of strings)
      */
     public function putFoldersIdWithHttpInfo($id, $workspace_id, $folder_name = null, $folder_index = null)
     {
@@ -656,15 +656,15 @@ class FoldersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FolderMeta',
+                '\Caplinked\Model\FolderMeta',
                 '/folders/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FolderMeta', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FolderMeta', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FolderMeta', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FolderMeta', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * WorkspacesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class WorkspacesApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class WorkspacesApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class WorkspacesApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return WorkspacesApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class WorkspacesApi
      * List all workspaces for a team
      *
      * @param int $team_id ID of team from which to list workspaces (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Workspace
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Workspace
      */
     public function getWorkspaces($team_id)
     {
@@ -108,8 +108,8 @@ class WorkspacesApi
      * List all workspaces for a team
      *
      * @param int $team_id ID of team from which to list workspaces (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspacesWithHttpInfo($team_id)
     {
@@ -148,15 +148,15 @@ class WorkspacesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Workspace',
+                '\Caplinked\Model\Workspace',
                 '/workspaces'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Workspace', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Workspace', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -171,8 +171,8 @@ class WorkspacesApi
      * Get workspace information
      *
      * @param int $id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Workspace
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Workspace
      */
     public function getWorkspacesId($id)
     {
@@ -186,8 +186,8 @@ class WorkspacesApi
      * Get workspace information
      *
      * @param int $id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWorkspacesIdWithHttpInfo($id)
     {
@@ -230,15 +230,15 @@ class WorkspacesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Workspace',
+                '\Caplinked\Model\Workspace',
                 '/workspaces/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Workspace', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Workspace', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -254,8 +254,8 @@ class WorkspacesApi
      *
      * @param int $team_id ID of parent team for this workspace (required)
      * @param string $workspace_name Name of workspace to create (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Workspace
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Workspace
      */
     public function postWorkspaces($team_id, $workspace_name)
     {
@@ -270,8 +270,8 @@ class WorkspacesApi
      *
      * @param int $team_id ID of parent team for this workspace (required)
      * @param string $workspace_name Name of workspace to create (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function postWorkspacesWithHttpInfo($team_id, $workspace_name)
     {
@@ -318,15 +318,15 @@ class WorkspacesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Workspace',
+                '\Caplinked\Model\Workspace',
                 '/workspaces'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Workspace', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Workspace', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -342,8 +342,8 @@ class WorkspacesApi
      *
      * @param int $id ID of workspace to update (required)
      * @param string $workspace_name Name of workspace to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Workspace
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\Workspace
      */
     public function putWorkspacesId($id, $workspace_name = null)
     {
@@ -358,8 +358,8 @@ class WorkspacesApi
      *
      * @param int $id ID of workspace to update (required)
      * @param string $workspace_name Name of workspace to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\Workspace, HTTP status code, HTTP response headers (array of strings)
      */
     public function putWorkspacesIdWithHttpInfo($id, $workspace_name = null)
     {
@@ -406,15 +406,15 @@ class WorkspacesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Workspace',
+                '\Caplinked\Model\Workspace',
                 '/workspaces/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\Workspace', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Workspace', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\Workspace', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

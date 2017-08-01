@@ -1,4 +1,4 @@
-# Swagger\Client\ActivitiesApi
+# Caplinked\ActivitiesApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **getActivitiesWorkspaceWorkspaceId**
-> \Swagger\Client\Model\Activity getActivitiesWorkspaceWorkspaceId($workspace_id, $page, $per_page, $user_id)
+> \Caplinked\Model\Activity getActivitiesWorkspaceWorkspaceId($workspace_id, $page, $per_page, $user_id)
 
 Get workspace activities
 
@@ -19,7 +19,7 @@ Get workspace activities
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\ActivitiesApi();
+$api_instance = new Caplinked\Api\ActivitiesApi();
 $workspace_id = 56; // int | ID of the workspace
 $page = 1; // int | Page number of results
 $per_page = 100; // int | Per page number of results. Options: 25, 50, 75, 100
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Activity**](../Model/Activity.md)
+[**\Caplinked\Model\Activity**](../Model/Activity.md)
 
 ### Authorization
 

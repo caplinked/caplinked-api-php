@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * FilesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class FilesApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class FilesApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class FilesApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return FilesApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -94,8 +94,8 @@ class FilesApi
      *
      * @param int $id ID of file to delete (required)
      * @param int $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileDelete
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileDelete
      */
     public function deleteFilesId($id, $workspace_id)
     {
@@ -110,8 +110,8 @@ class FilesApi
      *
      * @param int $id ID of file to delete (required)
      * @param int $workspace_id ID of workspace (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileDelete, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileDelete, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteFilesIdWithHttpInfo($id, $workspace_id)
     {
@@ -162,15 +162,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileDelete',
+                '\Caplinked\Model\FileDelete',
                 '/files/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileDelete', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileDelete', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileDelete', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileDelete', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -187,8 +187,8 @@ class FilesApi
      * @param int $id ID of file (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $page_number Page number of file (for viewer tokens) (optional, default to 1)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileInfoMapped
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileInfoMapped
      */
     public function getFilesId($id, $workspace_id, $page_number = '1')
     {
@@ -204,8 +204,8 @@ class FilesApi
      * @param int $id ID of file (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $page_number Page number of file (for viewer tokens) (optional, default to 1)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileInfoMapped, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileInfoMapped, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFilesIdWithHttpInfo($id, $workspace_id, $page_number = '1')
     {
@@ -260,15 +260,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileInfoMapped',
+                '\Caplinked\Model\FileInfoMapped',
                 '/files/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileInfoMapped', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileInfoMapped', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileInfoMapped', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileInfoMapped', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -285,8 +285,8 @@ class FilesApi
      * @param int $id ID of file to copy (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileCopyMove
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileCopyMove
      */
     public function postFilesIdCopy($id, $workspace_id, $destination_folder_id)
     {
@@ -302,8 +302,8 @@ class FilesApi
      * @param int $id ID of file to copy (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileCopyMove, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileCopyMove, HTTP status code, HTTP response headers (array of strings)
      */
     public function postFilesIdCopyWithHttpInfo($id, $workspace_id, $destination_folder_id)
     {
@@ -362,15 +362,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileCopyMove',
+                '\Caplinked\Model\FileCopyMove',
                 '/files/{id}/copy'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileCopyMove', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileCopyMove', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileCopyMove', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileCopyMove', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -387,8 +387,8 @@ class FilesApi
      * @param int $id ID of file to move (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileCopyMove
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileCopyMove
      */
     public function postFilesIdMove($id, $workspace_id, $destination_folder_id)
     {
@@ -404,8 +404,8 @@ class FilesApi
      * @param int $id ID of file to move (required)
      * @param int $workspace_id ID of workspace (required)
      * @param int $destination_folder_id ID of destination parent folder (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileCopyMove, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileCopyMove, HTTP status code, HTTP response headers (array of strings)
      */
     public function postFilesIdMoveWithHttpInfo($id, $workspace_id, $destination_folder_id)
     {
@@ -464,15 +464,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileCopyMove',
+                '\Caplinked\Model\FileCopyMove',
                 '/files/{id}/move'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileCopyMove', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileCopyMove', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileCopyMove', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileCopyMove', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -490,8 +490,8 @@ class FilesApi
      * @param int $workspace_id ID of workspace (required)
      * @param string $file_title Title of file (optional)
      * @param int $file_index Index number of file within current folder scope (integer) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileInfoMapped
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileInfoMapped
      */
     public function putFilesId($id, $workspace_id, $file_title = null, $file_index = null)
     {
@@ -508,8 +508,8 @@ class FilesApi
      * @param int $workspace_id ID of workspace (required)
      * @param string $file_title Title of file (optional)
      * @param int $file_index Index number of file within current folder scope (integer) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileInfoMapped, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileInfoMapped, HTTP status code, HTTP response headers (array of strings)
      */
     public function putFilesIdWithHttpInfo($id, $workspace_id, $file_title = null, $file_index = null)
     {
@@ -568,15 +568,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileInfoMapped',
+                '\Caplinked\Model\FileInfoMapped',
                 '/files/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileInfoMapped', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileInfoMapped', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileInfoMapped', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileInfoMapped', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -593,8 +593,8 @@ class FilesApi
      * @param int $workspace_id Workspace ID (required)
      * @param int $folder_id Folder ID (required)
      * @param string $file_name File name (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\FileInfoCompact
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\FileInfoCompact
      */
     public function putFilesUpload($workspace_id, $folder_id, $file_name)
     {
@@ -610,8 +610,8 @@ class FilesApi
      * @param int $workspace_id Workspace ID (required)
      * @param int $folder_id Folder ID (required)
      * @param string $file_name File name (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\FileInfoCompact, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\FileInfoCompact, HTTP status code, HTTP response headers (array of strings)
      */
     public function putFilesUploadWithHttpInfo($workspace_id, $folder_id, $file_name)
     {
@@ -666,15 +666,15 @@ class FilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\FileInfoCompact',
+                '\Caplinked\Model\FileInfoCompact',
                 '/files/upload'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\FileInfoCompact', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\FileInfoCompact', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\FileInfoCompact', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\FileInfoCompact', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

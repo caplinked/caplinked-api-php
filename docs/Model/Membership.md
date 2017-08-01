@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user** | [**\Swagger\Client\Model\User**](User.md) |  | [optional] 
+**user** | [**\Caplinked\Model\User**](User.md) |  | [optional] 
 **created_at** | **string** |  | [optional] 
 **updated_at** | **string** |  | [optional] 
 

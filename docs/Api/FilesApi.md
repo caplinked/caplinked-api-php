@@ -1,4 +1,4 @@
-# Swagger\Client\FilesApi
+# Caplinked\FilesApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **deleteFilesId**
-> \Swagger\Client\Model\FileDelete deleteFilesId($id, $workspace_id)
+> \Caplinked\Model\FileDelete deleteFilesId($id, $workspace_id)
 
 Delete file
 
@@ -24,7 +24,7 @@ Delete file
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $id = 56; // int | ID of file to delete
 $workspace_id = 56; // int | ID of workspace
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileDelete**](../Model/FileDelete.md)
+[**\Caplinked\Model\FileDelete**](../Model/FileDelete.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getFilesId**
-> \Swagger\Client\Model\FileInfoMapped getFilesId($id, $workspace_id, $page_number)
+> \Caplinked\Model\FileInfoMapped getFilesId($id, $workspace_id, $page_number)
 
 Get file information
 
@@ -71,7 +71,7 @@ Get file information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $id = 56; // int | ID of file
 $workspace_id = 56; // int | ID of workspace
 $page_number = 1; // int | Page number of file (for viewer tokens)
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileInfoMapped**](../Model/FileInfoMapped.md)
+[**\Caplinked\Model\FileInfoMapped**](../Model/FileInfoMapped.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postFilesIdCopy**
-> \Swagger\Client\Model\FileCopyMove postFilesIdCopy($id, $workspace_id, $destination_folder_id)
+> \Caplinked\Model\FileCopyMove postFilesIdCopy($id, $workspace_id, $destination_folder_id)
 
 Copy file
 
@@ -120,7 +120,7 @@ Copy file into another folder (existing file will not be modified)
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $id = 56; // int | ID of file to copy
 $workspace_id = 56; // int | ID of workspace
 $destination_folder_id = 56; // int | ID of destination parent folder
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileCopyMove**](../Model/FileCopyMove.md)
+[**\Caplinked\Model\FileCopyMove**](../Model/FileCopyMove.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postFilesIdMove**
-> \Swagger\Client\Model\FileCopyMove postFilesIdMove($id, $workspace_id, $destination_folder_id)
+> \Caplinked\Model\FileCopyMove postFilesIdMove($id, $workspace_id, $destination_folder_id)
 
 Move file
 
@@ -169,7 +169,7 @@ Move file into another folder
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $id = 56; // int | ID of file to move
 $workspace_id = 56; // int | ID of workspace
 $destination_folder_id = 56; // int | ID of destination parent folder
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileCopyMove**](../Model/FileCopyMove.md)
+[**\Caplinked\Model\FileCopyMove**](../Model/FileCopyMove.md)
 
 ### Authorization
 
@@ -207,7 +207,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFilesId**
-> \Swagger\Client\Model\FileInfoMapped putFilesId($id, $workspace_id, $file_title, $file_index)
+> \Caplinked\Model\FileInfoMapped putFilesId($id, $workspace_id, $file_title, $file_index)
 
 Update file information
 
@@ -218,7 +218,7 @@ Update file information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $id = 56; // int | ID of file
 $workspace_id = 56; // int | ID of workspace
 $file_title = "file_title_example"; // string | Title of file
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileInfoMapped**](../Model/FileInfoMapped.md)
+[**\Caplinked\Model\FileInfoMapped**](../Model/FileInfoMapped.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putFilesUpload**
-> \Swagger\Client\Model\FileInfoCompact putFilesUpload($workspace_id, $folder_id, $file_name)
+> \Caplinked\Model\FileInfoCompact putFilesUpload($workspace_id, $folder_id, $file_name)
 
 Upload file
 
@@ -269,7 +269,7 @@ Create or update a file with the same file name. Request body should be the file
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\FilesApi();
+$api_instance = new Caplinked\Api\FilesApi();
 $workspace_id = 56; // int | Workspace ID
 $folder_id = 56; // int | Folder ID
 $file_name = "file_name_example"; // string | File name
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\FileInfoCompact**](../Model/FileInfoCompact.md)
+[**\Caplinked\Model\FileInfoCompact**](../Model/FileInfoCompact.md)
 
 ### Authorization
 

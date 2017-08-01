@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * WatermarkApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class WatermarkApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class WatermarkApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class WatermarkApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return WatermarkApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class WatermarkApi
      * Delete custom watermark
      *
      * @param int $id ID of the watermark setting to delete (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\StatusMessage
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\StatusMessage
      */
     public function deleteWatermarkId($id)
     {
@@ -108,8 +108,8 @@ class WatermarkApi
      * Delete custom watermark
      *
      * @param int $id ID of the watermark setting to delete (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\StatusMessage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\StatusMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteWatermarkIdWithHttpInfo($id)
     {
@@ -152,15 +152,15 @@ class WatermarkApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\StatusMessage',
+                '\Caplinked\Model\StatusMessage',
                 '/watermark/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\StatusMessage', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\StatusMessage', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\StatusMessage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\StatusMessage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -175,8 +175,8 @@ class WatermarkApi
      * Get custom watermark setting
      *
      * @param int $id ID of the watermark setting (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomWatermarkSetting
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\CustomWatermarkSetting
      */
     public function getWatermarkId($id)
     {
@@ -190,8 +190,8 @@ class WatermarkApi
      * Get custom watermark setting
      *
      * @param int $id ID of the watermark setting (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWatermarkIdWithHttpInfo($id)
     {
@@ -234,15 +234,15 @@ class WatermarkApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomWatermarkSetting',
+                '\Caplinked\Model\CustomWatermarkSetting',
                 '/watermark/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomWatermarkSetting', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\CustomWatermarkSetting', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -269,8 +269,8 @@ class WatermarkApi
      * @param bool $display_ip_address Display user IP address (optional, default to true)
      * @param bool $display_time Display time (optional, default to true)
      * @param bool $display_workspace_name Display workspace name (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomWatermarkSetting
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\CustomWatermarkSetting
      */
     public function postWatermark($team_id, $custom_text, $color = '#333333', $opacity = '0.5', $font_size = '18', $rotation = '0', $hposition = 'center', $vposition = 'center', $display_user_name = 'true', $display_user_email = 'true', $display_ip_address = 'true', $display_time = 'true', $display_workspace_name = null)
     {
@@ -296,8 +296,8 @@ class WatermarkApi
      * @param bool $display_ip_address Display user IP address (optional, default to true)
      * @param bool $display_time Display time (optional, default to true)
      * @param bool $display_workspace_name Display workspace name (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
      */
     public function postWatermarkWithHttpInfo($team_id, $custom_text, $color = '#333333', $opacity = '0.5', $font_size = '18', $rotation = '0', $hposition = 'center', $vposition = 'center', $display_user_name = 'true', $display_user_email = 'true', $display_ip_address = 'true', $display_time = 'true', $display_workspace_name = null)
     {
@@ -402,15 +402,15 @@ class WatermarkApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomWatermarkSetting',
+                '\Caplinked\Model\CustomWatermarkSetting',
                 '/watermark'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomWatermarkSetting', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\CustomWatermarkSetting', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -437,8 +437,8 @@ class WatermarkApi
      * @param bool $display_ip_address Display user IP address (optional)
      * @param bool $display_time Display time (optional)
      * @param bool $display_workspace_name Display workspace name (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomWatermarkSetting
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\CustomWatermarkSetting
      */
     public function putWatermarkId($id, $custom_text = null, $color = null, $opacity = null, $font_size = null, $rotation = null, $hposition = null, $vposition = null, $display_user_name = null, $display_user_email = null, $display_ip_address = null, $display_time = null, $display_workspace_name = null)
     {
@@ -464,8 +464,8 @@ class WatermarkApi
      * @param bool $display_ip_address Display user IP address (optional)
      * @param bool $display_time Display time (optional)
      * @param bool $display_workspace_name Display workspace name (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\CustomWatermarkSetting, HTTP status code, HTTP response headers (array of strings)
      */
     public function putWatermarkIdWithHttpInfo($id, $custom_text = null, $color = null, $opacity = null, $font_size = null, $rotation = null, $hposition = null, $vposition = null, $display_user_name = null, $display_user_email = null, $display_ip_address = null, $display_time = null, $display_workspace_name = null)
     {
@@ -570,15 +570,15 @@ class WatermarkApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomWatermarkSetting',
+                '\Caplinked\Model\CustomWatermarkSetting',
                 '/watermark/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\CustomWatermarkSetting', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomWatermarkSetting', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\CustomWatermarkSetting', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

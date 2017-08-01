@@ -1,4 +1,4 @@
-# Swagger\Client\UsersApi
+# Caplinked\UsersApi
 
 All URIs are relative to *https://sandbox.caplinked.com/api/v1*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteUsers**
-> \Swagger\Client\Model\StatusMessage deleteUsers($user_id)
+> \Caplinked\Model\StatusMessage deleteUsers($user_id)
 
 Delete user
 
@@ -22,7 +22,7 @@ Delete user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$api_instance = new Caplinked\Api\UsersApi();
 $user_id = 56; // int | ID of the user you want to delete
 
 try {
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StatusMessage**](../Model/StatusMessage.md)
+[**\Caplinked\Model\StatusMessage**](../Model/StatusMessage.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsersMe**
-> \Swagger\Client\Model\User getUsersMe()
+> \Caplinked\Model\User getUsersMe()
 
 Get user information
 
@@ -67,7 +67,7 @@ Get user information
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$api_instance = new Caplinked\Api\UsersApi();
 
 try {
     $result = $api_instance->getUsersMe();
@@ -83,7 +83,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\User**](../Model/User.md)
+[**\Caplinked\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postUsers**
-> \Swagger\Client\Model\User postUsers($user_email, $user_first_name, $user_last_name, $user_time_zone)
+> \Caplinked\Model\User postUsers($user_email, $user_first_name, $user_last_name, $user_time_zone)
 
 Create user
 
@@ -108,7 +108,7 @@ Create user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$api_instance = new Caplinked\Api\UsersApi();
 $user_email = "user_email_example"; // string | Email of new user
 $user_first_name = "user_first_name_example"; // string | First of new user
 $user_last_name = "user_last_name_example"; // string | Last name of new user
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User**](../Model/User.md)
+[**\Caplinked\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -148,7 +148,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putUsersMe**
-> \Swagger\Client\Model\User putUsersMe($user_email, $user_first_name, $user_last_name, $user_time_zone)
+> \Caplinked\Model\User putUsersMe($user_email, $user_first_name, $user_last_name, $user_time_zone)
 
 Update a user
 
@@ -159,7 +159,7 @@ Update a user
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\UsersApi();
+$api_instance = new Caplinked\Api\UsersApi();
 $user_email = "user_email_example"; // string | Email of user to update
 $user_first_name = "user_first_name_example"; // string | First name of user to update
 $user_last_name = "user_last_name_example"; // string | Last name of user to update
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User**](../Model/User.md)
+[**\Caplinked\Model\User**](../Model/User.md)
 
 ### Authorization
 

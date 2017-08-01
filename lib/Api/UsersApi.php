@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,18 +26,18 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Caplinked\Api;
 
-use \Swagger\Client\ApiClient;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ObjectSerializer;
+use \Caplinked\ApiClient;
+use \Caplinked\ApiException;
+use \Caplinked\Configuration;
+use \Caplinked\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Caplinked
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -46,16 +46,16 @@ class UsersApi
     /**
      * API Client
      *
-     * @var \Swagger\Client\ApiClient instance of the ApiClient
+     * @var \Caplinked\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Swagger\Client\ApiClient|null $apiClient The api client to use
+     * @param \Caplinked\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Swagger\Client\ApiClient $apiClient = null)
+    public function __construct(\Caplinked\ApiClient $apiClient = null)
     {
         if ($apiClient === null) {
             $apiClient = new ApiClient();
@@ -67,7 +67,7 @@ class UsersApi
     /**
      * Get API client
      *
-     * @return \Swagger\Client\ApiClient get the API client
+     * @return \Caplinked\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -77,11 +77,11 @@ class UsersApi
     /**
      * Set the API client
      *
-     * @param \Swagger\Client\ApiClient $apiClient set the API client
+     * @param \Caplinked\ApiClient $apiClient set the API client
      *
      * @return UsersApi
      */
-    public function setApiClient(\Swagger\Client\ApiClient $apiClient)
+    public function setApiClient(\Caplinked\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -93,8 +93,8 @@ class UsersApi
      * Delete user
      *
      * @param int $user_id ID of the user you want to delete (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\StatusMessage
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\StatusMessage
      */
     public function deleteUsers($user_id)
     {
@@ -108,8 +108,8 @@ class UsersApi
      * Delete user
      *
      * @param int $user_id ID of the user you want to delete (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\StatusMessage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\StatusMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteUsersWithHttpInfo($user_id)
     {
@@ -148,15 +148,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\StatusMessage',
+                '\Caplinked\Model\StatusMessage',
                 '/users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\StatusMessage', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\StatusMessage', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\StatusMessage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\StatusMessage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -170,8 +170,8 @@ class UsersApi
      *
      * Get user information
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\User
      */
     public function getUsersMe()
     {
@@ -184,8 +184,8 @@ class UsersApi
      *
      * Get user information
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUsersMeWithHttpInfo()
     {
@@ -216,15 +216,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\User',
+                '\Caplinked\Model\User',
                 '/users/me'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\User', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\User', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -242,8 +242,8 @@ class UsersApi
      * @param string $user_first_name First of new user (required)
      * @param string $user_last_name Last name of new user (required)
      * @param string $user_time_zone Time zone of new user (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\User
      */
     public function postUsers($user_email, $user_first_name, $user_last_name, $user_time_zone = null)
     {
@@ -260,8 +260,8 @@ class UsersApi
      * @param string $user_first_name First of new user (required)
      * @param string $user_last_name Last name of new user (required)
      * @param string $user_time_zone Time zone of new user (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function postUsersWithHttpInfo($user_email, $user_first_name, $user_last_name, $user_time_zone = null)
     {
@@ -320,15 +320,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\User',
+                '\Caplinked\Model\User',
                 '/users'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\User', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 201:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\User', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -346,8 +346,8 @@ class UsersApi
      * @param string $user_first_name First name of user to update (optional)
      * @param string $user_last_name Last name of user to update (optional)
      * @param string $user_time_zone Time zone of user to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return \Caplinked\Model\User
      */
     public function putUsersMe($user_email = null, $user_first_name = null, $user_last_name = null, $user_time_zone = null)
     {
@@ -364,8 +364,8 @@ class UsersApi
      * @param string $user_first_name First name of user to update (optional)
      * @param string $user_last_name Last name of user to update (optional)
      * @param string $user_time_zone Time zone of user to update (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @throws \Caplinked\ApiException on non-2xx response
+     * @return array of \Caplinked\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
     public function putUsersMeWithHttpInfo($user_email = null, $user_first_name = null, $user_last_name = null, $user_time_zone = null)
     {
@@ -412,15 +412,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\User',
+                '\Caplinked\Model\User',
                 '/users/me'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Caplinked\Model\User', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Caplinked\Model\User', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
