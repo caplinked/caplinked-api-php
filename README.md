@@ -56,17 +56,26 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Caplinked\Api\ActivitiesApi();
-$workspace_id = 56; // int | ID of the workspace
-$page = 1; // int | Page number of results
-$per_page = 100; // int | Per page number of results. Options: 25, 50, 75, 100
-$user_id = 56; // int | ID of the user
+date_default_timezone_set('UTC');
+
+$key = '0c1da72601ca7c39df77a317d93c1caefccxxxxx';
+$secret_key = 'cad02b1a2593862c5f151a5b8496f6e60c8581c82697ad706d8930bbd56xxxxx';
+$user_resource_key = '1b62543ca4f8311e9bd0e628705d76fb6acxxxxx';
+
+$config = Caplinked\Configuration::getDefaultConfiguration();
+$config->setApiKey('cl-api-key', $key);
+$config->setApiKey('cl-api-secret-key', $secret_key);
+$config->setApiKey('cl-api-user-token', $user_resource_key);
+//$config->setDebug(true);
+$api_client = new Caplinked\ApiClient($config);
+
+$api_instance = new Caplinked\Api\UsersApi($api_client);
 
 try {
-    $result = $api_instance->getActivitiesWorkspaceWorkspaceId($workspace_id, $page, $per_page, $user_id);
-    print_r($result);
+    $result = $api_instance->getUsersMe();
+    var_dump($result['first_name']); // string(23) "Arons"
 } catch (Exception $e) {
-    echo 'Exception when calling ActivitiesApi->getActivitiesWorkspaceWorkspaceId: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UsersApi->getUsersMe: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
