@@ -180,7 +180,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+See example on [Getting Started](#getting-started)
 
 
 ## Author
