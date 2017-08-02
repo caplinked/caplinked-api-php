@@ -1,18 +1,18 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "description": "",
+    "name": "caplinked/caplinked-api-php",
+    "description": "Caplinked API (PHP SDK) - Document Security and Sharing",
     "keywords": [
-        "swagger",
+        "caplinked",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://developer.caplinked.com",
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "Arons Lee",
+            "homepage": "https://github.com/caplinked/caplinked-api-php"
         }
     ],
     "require": {
