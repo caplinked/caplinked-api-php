@@ -181,10 +181,3 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 See example on [Getting Started](#getting-started)
-
-
-## Author
-
-
-
-
