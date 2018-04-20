@@ -153,6 +153,10 @@ class ApiClient
         $hash = hash_hmac('sha256', $sigString, $this->config->getApiKey('cl-api-secret-key'));
         $headerParams['x-api-signature'] = 'Method=HMAC-SHA256 Signature=' . $hash;
 
+        if ($method === self::$POST) {
+            $headerParams['Content-Type'] = 'application/x-www-form-urlencoded';
+        }
+
         foreach ($headerParams as $key => $val) {
             $headers[] = "$key: $val";
         }
